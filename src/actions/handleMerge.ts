@@ -48,7 +48,7 @@ export const handleMerge = async (): Promise<void> => {
     });
 
     const text =
-      "This PR has been merged. One-way ticket to Prod purchased. See you in Valhalla.";
+      "This PR has been merged.";
     await slackWebClient.chat.postMessage({
       channel: channelId,
       thread_ts: slackMessageId,
