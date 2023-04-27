@@ -69,10 +69,9 @@ export const handlePullRequestReview = async (): Promise<void> => {
         break;
       // TODO see if getting the review could allow for posting the text that was commented
       // NOTE for reviews where the state is "commented", the comment text is not in the event payload
-      // case "commented":
-      //   actionText = "neither approved or denied your PR, but merely commented";
-      //   reactionToAdd = reactionMap["commented"];
-      //   break;
+      case "commented":
+        reactionToAdd = reactionMap["commented"];
+        break;
       case "approved":
         actionText = "approved your PR";
         reactionToAdd = reactionMap["approved"];
